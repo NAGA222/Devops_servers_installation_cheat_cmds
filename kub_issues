@@ -1,0 +1,19 @@
+#kubeadm init --- issue1
+rm /etc/containerd/config.toml
+systemctl restart containerd
+kubeadm init
+
+
+#connection refused error ---
+sudo systemctl stop kubelet
+sudo systemctl start kubelet
+strace -eopenat kubectl version
+kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
+
+#worker node --- Do Not run
+kubeadm init (do not do this)
+kubeadm reset
+
+
+
+81d3e94e9112b57e95cc5e200d7cab233a814063
