@@ -11,3 +11,6 @@ sudo docker run hello-world
 
 #sonarqube installation
 docker run -d -p 9000:9000 sonarqube:lts
+
+#default username: admin
+#default password: admin
